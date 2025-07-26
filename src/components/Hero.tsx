@@ -221,7 +221,7 @@ const Hero = () => {
               <div className="relative">
                 <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-accent/30 shadow-card floating-animation relative z-10">
                   <img 
-                    src="https://i.postimg.cc/4xY3Z6kq/Profile.jpg" 
+                    src="/lovable-uploads/40d79516-0c15-4a7c-90d0-4ac7cec52c93.png" 
                     alt="Manoj V - AIML Engineer" 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
