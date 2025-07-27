@@ -1,7 +1,27 @@
 import { Calendar, GraduationCap, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { downloadResumeAsPDF } from '@/utils/resumeDownload';
+import { useToast } from '@/hooks/use-toast';
 
 const About = () => {
+  const { toast } = useToast();
+
+  const handleDownloadResume = async () => {
+    try {
+      await downloadResumeAsPDF();
+      toast({
+        title: "Resume Downloaded",
+        description: "Your resume has been downloaded as a PDF file.",
+      });
+    } catch (error) {
+      toast({
+        title: "Download Failed", 
+        description: "Sorry, there was an error downloading the resume. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
+
   const education = [
     {
       degree: "B.E. in Artificial Intelligence and Machine Learning",
@@ -52,7 +72,7 @@ const About = () => {
             </div>
 
             <div className="flex gap-4">
-              <Button variant="neon" size="lg">
+              <Button variant="neon" size="lg" onClick={handleDownloadResume}>
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </Button>

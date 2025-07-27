@@ -1,9 +1,28 @@
 import { Button } from '@/components/ui/button';
 import { ChevronDown, Download, Github, Linkedin, Mail, Phone, Sparkles, Code2, Brain, Zap } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { downloadResumeAsPDF } from '@/utils/resumeDownload';
+import { useToast } from '@/hooks/use-toast';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const { toast } = useToast();
+
+  const handleDownloadResume = async () => {
+    try {
+      await downloadResumeAsPDF();
+      toast({
+        title: "Resume Downloaded",
+        description: "Your resume has been downloaded as a PDF file.",
+      });
+    } catch (error) {
+      toast({
+        title: "Download Failed",
+        description: "Sorry, there was an error downloading the resume. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -180,6 +199,7 @@ const Hero = () => {
                 variant="hero" 
                 size="lg"
                 className="group"
+                onClick={handleDownloadResume}
               >
                 <Download className="mr-2 h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
                 Download Resume
