@@ -9,23 +9,12 @@ const Contact = () => {
     email: '',
     message: ''
   });
-  const [accessKey, setAccessKey] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    if (!accessKey.trim()) {
-      toast({
-        title: "Access key required",
-        description: "Please enter your Web3Forms access key first.",
-        variant: "destructive",
-      });
-      setIsSubmitting(false);
-      return;
-    }
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -34,7 +23,7 @@ const Contact = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: accessKey,
+          access_key: 'c8914d01-bcf8-4cc2-a066-10e350cce76c',
           name: formData.name,
           email: formData.email,
           message: formData.message,
@@ -180,23 +169,6 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="glass-card p-8 rounded-2xl">
             <h3 className="text-xl font-semibold mb-6">Send a Message</h3>
-            <div className="mb-6 p-4 bg-accent/10 border border-accent/20 rounded-lg">
-              <h4 className="text-sm font-medium text-foreground mb-2">Setup Required</h4>
-              <p className="text-xs text-muted-foreground mb-3">
-                Get your free Web3Forms access key from{' '}
-                <a href="https://web3forms.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-                  web3forms.com
-                </a>{' '}
-                to enable email delivery.
-              </p>
-              <input
-                type="text"
-                value={accessKey}
-                onChange={(e) => setAccessKey(e.target.value)}
-                placeholder="Paste your Web3Forms access key here"
-                className="w-full px-3 py-2 text-sm bg-input border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
-              />
-            </div>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
