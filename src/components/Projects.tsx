@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { ExternalLink, Github, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import todoImage from '@/assets/project-todo.jpg';
+import votingImage from '@/assets/project-voting.jpg';
+import realestateImage from '@/assets/project-realestate.jpg';
+import portfolioImage from '@/assets/project-portfolio.jpg';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -11,7 +15,7 @@ const Projects = () => {
     {
       title: "To-Do List Web App",
       description: "A responsive task management application with intuitive UI and local storage functionality.",
-      image: "/placeholder.svg",
+      image: todoImage,
       technologies: ["HTML", "CSS", "JavaScript"],
       category: "Frontend",
       github: "https://github.com/Manoj2526-creator",
@@ -21,7 +25,7 @@ const Projects = () => {
     {
       title: "Online Voting Application",
       description: "Secure voting platform with real-time results and authentication system.",
-      image: "/placeholder.svg", 
+      image: votingImage, 
       technologies: ["React", "Go", "MongoDB"],
       category: "Backend",
       github: "https://github.com/Manoj2526-creator",
@@ -31,7 +35,7 @@ const Projects = () => {
     {
       title: "Real Estate Price Prediction",
       description: "ML model to predict property prices using historical data and market trends.",
-      image: "/placeholder.svg",
+      image: realestateImage,
       technologies: ["Python", "Scikit-learn", "Streamlit"],
       category: "ML/AI", 
       github: "https://github.com/Manoj2526-creator",
@@ -41,7 +45,7 @@ const Projects = () => {
     {
       title: "Portfolio Website",
       description: "Modern, responsive portfolio showcasing projects and skills with smooth animations.",
-      image: "/placeholder.svg",
+      image: portfolioImage,
       technologies: ["React", "Tailwind CSS", "TypeScript"],
       category: "Frontend",
       github: "https://github.com/Manoj2526-creator",
@@ -96,11 +100,13 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Project Image */}
-              <div className="relative overflow-hidden bg-gradient-glow h-48">
-                <div className="absolute inset-0 bg-gradient-ai opacity-80" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-6xl font-bold text-white/20">{project.title.charAt(0)}</div>
-                </div>
+              <div className="relative overflow-hidden h-48">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 {project.featured && (
                   <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-medium">
                     Featured
