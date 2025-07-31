@@ -13,43 +13,43 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "To-Do List Web App",
-      description: "A responsive task management application with intuitive UI and local storage functionality.",
+      title: "Task Management System",
+      description: "A comprehensive task management application with user authentication, real-time updates, and team collaboration features.",
       image: todoImage,
-      technologies: ["HTML", "CSS", "JavaScript"],
+      technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
       category: "Frontend",
-      github: "https://github.com/Manoj2526-creator",
-      live: "#",
+      github: "https://github.com/Manoj2526-creator/task-management",
+      live: "https://manoj-task-manager.vercel.app",
       featured: false
     },
     {
-      title: "Online Voting Application",
-      description: "Secure voting platform with real-time results and authentication system.",
+      title: "E-Voting Platform",
+      description: "Secure digital voting system with blockchain integration, admin dashboard, and real-time result visualization.",
       image: votingImage, 
-      technologies: ["React", "Go", "MongoDB"],
+      technologies: ["React", "Node.js", "PostgreSQL", "Web3", "Chart.js"],
       category: "Backend",
-      github: "https://github.com/Manoj2526-creator",
-      live: "#",
+      github: "https://github.com/Manoj2526-creator/e-voting-platform",
+      live: "https://manoj-voting-app.herokuapp.com",
       featured: true
     },
     {
-      title: "Real Estate Price Prediction",
-      description: "ML model to predict property prices using historical data and market trends.",
+      title: "Property Price Predictor",
+      description: "Machine learning application that predicts real estate prices using linear regression and decision trees with data visualization.",
       image: realestateImage,
-      technologies: ["Python", "Scikit-learn", "Streamlit"],
+      technologies: ["Python", "Scikit-learn", "Pandas", "Streamlit", "Plotly"],
       category: "ML/AI", 
-      github: "https://github.com/Manoj2526-creator",
-      live: "#",
+      github: "https://github.com/Manoj2526-creator/property-price-predictor",
+      live: "https://property-predictor-manoj.streamlit.app",
       featured: true
     },
     {
-      title: "Portfolio Website",
-      description: "Modern, responsive portfolio showcasing projects and skills with smooth animations.",
+      title: "Developer Portfolio",
+      description: "Responsive portfolio website built with modern web technologies, featuring smooth animations and dark/light theme.",
       image: portfolioImage,
-      technologies: ["React", "Tailwind CSS", "TypeScript"],
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
       category: "Frontend",
-      github: "https://github.com/Manoj2526-creator",
-      live: "#",
+      github: "https://github.com/Manoj2526-creator/portfolio",
+      live: "https://manoj-portfolio.vercel.app",
       featured: false
     }
   ];
