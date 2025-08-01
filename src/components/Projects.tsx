@@ -20,7 +20,7 @@ const Projects = () => {
       technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
       category: "Frontend",
       github: "https://github.com/Manoj2526-creator/task-management",
-      live: "https://manoj-task-manager.vercel.app",
+      live: "https://lovable.dev/projects/24ee7c90-c2aa-499b-8daa-5bab811e4543",
       featured: false
     },
     {
@@ -30,7 +30,7 @@ const Projects = () => {
       technologies: ["React", "Node.js", "PostgreSQL", "Web3", "Chart.js"],
       category: "Backend",
       github: "https://github.com/Manoj2526-creator/e-voting-platform",
-      live: "https://manoj-voting-app.herokuapp.com",
+      live: "https://lovable.dev/projects/aea41494-af81-4270-a4c0-65a1b9d21431",
       featured: true
     },
     {
@@ -40,7 +40,7 @@ const Projects = () => {
       technologies: ["Python", "Scikit-learn", "Pandas", "Streamlit", "Plotly"],
       category: "ML/AI", 
       github: "https://github.com/Manoj2526-creator/property-price-predictor",
-      live: "https://property-predictor-manoj.streamlit.app",
+      live: "https://lovable.dev/projects/a8a6d560-150a-453a-ac18-0ec695ba5192",
       featured: true
     },
     {
