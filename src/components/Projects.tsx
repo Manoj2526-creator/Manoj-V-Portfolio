@@ -5,6 +5,7 @@ import todoImage from '@/assets/project-todo.jpg';
 import votingImage from '@/assets/project-voting.jpg';
 import realestateImage from '@/assets/project-realestate.jpg';
 import portfolioImage from '@/assets/project-portfolio.jpg';
+import bankingImage from '@/assets/project-banking.jpg';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -51,6 +52,16 @@ const Projects = () => {
       github: "https://github.com/Manoj2526-creator/portfolio",
       live: "https://manoj-portfolio.vercel.app",
       featured: false
+    },
+    {
+      title: "Banking System",
+      description: "Comprehensive banking management system with account management, transaction processing, loan management, and detailed documentation manuals.",
+      image: bankingImage,
+      technologies: ["Java", "Spring Boot", "MySQL", "REST API", "JWT"],
+      category: "Backend",
+      github: "https://github.com/Manoj2526-creator/banking-system",
+      live: "https://banking-system-demo.herokuapp.com",
+      featured: true
     }
   ];
 
