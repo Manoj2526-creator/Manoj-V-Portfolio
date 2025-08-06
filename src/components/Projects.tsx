@@ -63,7 +63,7 @@ const Projects = () => {
       image: bankingImage,
       technologies: ["Java", "Spring Boot", "MySQL", "REST API", "JWT"],
       category: "Backend",
-      github: "https://github.com/Manoj2526-creator/banking-system",
+      github: "https://github.com/Manoj2526-creator/Banking-System",
       live: "https://banking-system-demo.herokuapp.com",
       featured: true,
       showLiveDemo: false
