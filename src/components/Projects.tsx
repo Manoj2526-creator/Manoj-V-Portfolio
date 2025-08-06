@@ -52,7 +52,7 @@ const Projects = () => {
       image: portfolioImage,
       technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
       category: "Frontend",
-      github: "https://github.com/Manoj2526-creator/portfolio",
+      github: "https://github.com/Manoj2526-creator/Manoj-V-Portfolio?tab=readme-ov-file",
       live: "https://manoj-portfolio.vercel.app",
       featured: false,
       showLiveDemo: false
