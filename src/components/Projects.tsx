@@ -19,7 +19,7 @@ const Projects = () => {
       image: todoImage,
       technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
       category: "Frontend",
-      github: "https://github.com/Manoj2526-creator/task-management",
+      github: "https://github.com/Manoj2526-creator/To-do-list",
       live: "https://lovable.dev/projects/24ee7c90-c2aa-499b-8daa-5bab811e4543",
       featured: false,
       showLiveDemo: false
