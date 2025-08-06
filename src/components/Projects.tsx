@@ -21,7 +21,8 @@ const Projects = () => {
       category: "Frontend",
       github: "https://github.com/Manoj2526-creator/task-management",
       live: "https://lovable.dev/projects/24ee7c90-c2aa-499b-8daa-5bab811e4543",
-      featured: false
+      featured: false,
+      showLiveDemo: false
     },
     {
       title: "E-Voting Platform",
@@ -31,7 +32,8 @@ const Projects = () => {
       category: "Backend",
       github: "https://github.com/Manoj2526-creator/e-voting-platform",
       live: "https://lovable.dev/projects/aea41494-af81-4270-a4c0-65a1b9d21431",
-      featured: true
+      featured: true,
+      showLiveDemo: false
     },
     {
       title: "Property Price Predictor",
@@ -41,7 +43,8 @@ const Projects = () => {
       category: "ML/AI", 
       github: "https://github.com/Manoj2526-creator/property-price-predictor",
       live: "https://lovable.dev/projects/a8a6d560-150a-453a-ac18-0ec695ba5192",
-      featured: true
+      featured: true,
+      showLiveDemo: false
     },
     {
       title: "Developer Portfolio",
@@ -51,7 +54,8 @@ const Projects = () => {
       category: "Frontend",
       github: "https://github.com/Manoj2526-creator/portfolio",
       live: "https://manoj-portfolio.vercel.app",
-      featured: false
+      featured: false,
+      showLiveDemo: false
     },
     {
       title: "Banking System",
@@ -61,7 +65,8 @@ const Projects = () => {
       category: "Backend",
       github: "https://github.com/Manoj2526-creator/banking-system",
       live: "https://banking-system-demo.herokuapp.com",
-      featured: true
+      featured: true,
+      showLiveDemo: false
     }
   ];
 
@@ -154,7 +159,7 @@ const Projects = () => {
                       Code
                     </a>
                   </Button>
-                  {!project.featured && (
+                  {project.showLiveDemo && (
                     <Button variant="hero" size="sm" asChild>
                       <a href={project.live} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="mr-2 h-4 w-4" />
