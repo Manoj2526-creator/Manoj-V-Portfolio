@@ -154,12 +154,14 @@ const Projects = () => {
                       Code
                     </a>
                   </Button>
-                  <Button variant="hero" size="sm" asChild>
-                    <a href={project.live} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </a>
-                  </Button>
+                  {!project.featured && (
+                    <Button variant="hero" size="sm" asChild>
+                      <a href={project.live} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>
