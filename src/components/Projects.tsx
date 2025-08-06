@@ -41,7 +41,7 @@ const Projects = () => {
       image: realestateImage,
       technologies: ["Python", "Scikit-learn", "Pandas", "Streamlit", "Plotly"],
       category: "ML/AI", 
-      github: "https://github.com/Manoj2526-creator/property-price-predictor",
+      github: "https://github.com/Manoj2526-creator/Real-Estate-Price-Prediction?tab=readme-ov-file",
       live: "https://lovable.dev/projects/a8a6d560-150a-453a-ac18-0ec695ba5192",
       featured: true,
       showLiveDemo: false
