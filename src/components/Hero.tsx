@@ -3,6 +3,7 @@ import { ChevronDown, Download, Github, Linkedin, Mail, Phone, Sparkles, Code2, 
 import { useEffect, useState } from 'react';
 import { downloadResumeAsPDF } from '@/utils/resumeDownload';
 import { useToast } from '@/hooks/use-toast';
+import profileImage from '@/assets/profile-manoj-new.jpg';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -241,7 +242,7 @@ const Hero = () => {
               <div className="relative">
                 <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-accent/30 shadow-card floating-animation relative z-10">
                   <img 
-                    src="/src/assets/profile-manoj-new.jpg" 
+                    src={profileImage} 
                     alt="Manoj V - AIML Engineer" 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
